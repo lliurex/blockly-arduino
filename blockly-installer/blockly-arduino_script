@@ -1,0 +1,70 @@
+#!/bin/bash
+
+
+ACTION="$1"
+BLOCKLY_DIR="/usr/share/blockly-arduino/blockly/"
+BLOCKLY_LANG_FILE="/usr/share/blockly-arduino/blockly/lang/code.js"
+
+DEFAULT_LANG_FILE_VALENCIAN="/usr/share/blockly-arduino/default-lang/code_ca@valencia.js"
+DEFAULT_LANG_FILE_SPANISH="/usr/share/blockly-arduino/default-lang/code_es.js"
+DEFAULT_LANG_FILE="/usr/share/blockly-arduino/default-lang/code_en.js"
+
+
+PACKAGE_LIST=$@
+
+
+case $ACTION in
+
+		postInstall)
+
+			echo "Set default language..."
+			session_lang=$LANG
+
+			if [[ $session_lang == *"ca"* ]]; then
+  				cp $DEFAULT_LANG_FILE_VALENCIAN $BLOCKLY_LANG_FILE
+			else
+				if [[ $session_lang == *"es"* ]];then
+					cp $DEFAULT_LANG_FILE_SPANISH $BLOCKLY_LANG_FILE
+				else
+					cp $DEFAULT_LANG_FILE $BLOCKLY_LANG_FILE
+				fi
+			fi 
+
+			echo "Creating link in /var/www..."
+			ln -sf $BLOCKLY_DIR /var/www/blockly-arduino
+			echo "Enabling apache site for blockly@arduino..."
+			a2ensite blockly-arduino.conf
+			echo "Restarting apache service..."
+			systemctl restart apache2.service
+		
+		;;
+
+		remove)
+			for ix in $PACKAGE_LIST	
+
+			do
+				case $ix in
+
+					blockly-arduino)
+						
+						echo "Removing package..."
+						apt-get remove -y $ix
+						TEST=$( dpkg-query -s  $ix 2> /dev/null| grep Status | cut -d " " -f 4 )
+						if [ "$TEST" == 'installed' ];then
+							exit 1
+						fi
+
+						rm -rf /usr/share/blockly-arduino
+						echo "Disabling site..."
+						a2dissite blockly-arduino.conf
+						rm -f /var/www/blockly-arduino
+						echo "Restarting apache service..."
+						systemctl restart apache2.service 
+
+					;;
+
+				esac
+			done	
+		;;		
+			
+esac
