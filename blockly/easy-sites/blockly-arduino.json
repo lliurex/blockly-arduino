@@ -1,0 +1,16 @@
+{
+    "linkid":"blockly-arduino",
+    "link":"http://blockly-arduino",
+    "icon":"blockly-arduino.png",
+    "fonticon":"icon-cloud",
+    "name": {
+        "default":"Blockly@arduino",
+        "valencia":"Blockly@arduino",
+        "es":"Blockly@arduino"
+    },
+    "description": {
+        "default":"Blockly@rduino: Create Code with Blocks ",
+        "valencia":"Blockly@rduino: Crea Codi amb Blocs ",
+        "es":"Blockly@rduino: Crea Código con Bloques "
+    }
+}

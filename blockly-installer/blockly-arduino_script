@@ -9,6 +9,13 @@ DEFAULT_LANG_FILE_VALENCIAN="/usr/share/blockly-arduino/default-lang/code_ca@val
 DEFAULT_LANG_FILE_SPANISH="/usr/share/blockly-arduino/default-lang/code_es.js"
 DEFAULT_LANG_FILE="/usr/share/blockly-arduino/default-lang/code_en.js"
 
+EASY_SITE_FILES="/usr/share/blockly-arduino/easy-sites/"
+EASY_SITE=$EASY_SITE_FILES"blockly-arduino.json"
+EASY_SITE_ICON=$EASY_SITE_FILES"blockly-arduino.png"
+
+EASY_SITES_DIR="/var/www/srv/links/"
+EASY_SITES_DIR_ICON="/var/www/srv/icons/"
+
 
 PACKAGE_LIST=$@
 
@@ -32,10 +39,25 @@ case $ACTION in
 
 			echo "Creating link in /var/www..."
 			ln -sf $BLOCKLY_DIR /var/www/blockly-arduino
+			
+			echo "Creatin easy-site..."
+			cp $EASY_SITE $EASY_SITES_DIR
+			cp $EASY_SITE_ICON $EASY_SITES_DIR_ICON
+			
 			echo "Enabling apache site for blockly@arduino..."
 			a2ensite blockly-arduino.conf
+			
 			echo "Restarting apache service..."
 			systemctl restart apache2.service
+
+			echo "Creating dnsmasq..."
+			MAGIC_KEY=$(cat /etc/n4d/key)
+			hostname=$(hostname)
+			if [ "$hostname" != "blockly-arduino" ]; then
+				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a blockly-arduino
+
+			fi
+			systemctl restart dnsmasq
 		
 		;;
 
@@ -58,6 +80,11 @@ case $ACTION in
 						echo "Disabling site..."
 						a2dissite blockly-arduino.conf
 						rm -f /var/www/blockly-arduino
+
+						echo "Removin easy-site..."
+						rm -f $EASY_SITES_DIR"blockly-arduino.json"
+						rm -f $EASY_SITES_DIR_ICON"blockly-arduino.png"
+						
 						echo "Restarting apache service..."
 						systemctl restart apache2.service 
 
