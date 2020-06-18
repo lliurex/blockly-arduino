@@ -5,9 +5,7 @@ ACTION="$1"
 BLOCKLY_DIR="/usr/share/blockly-arduino/blockly/"
 BLOCKLY_LANG_FILE="/usr/share/blockly-arduino/blockly/lang/code.js"
 
-DEFAULT_LANG_FILE_VALENCIAN="/usr/share/blockly-arduino/default-lang/code_ca@valencia.js"
-DEFAULT_LANG_FILE_SPANISH="/usr/share/blockly-arduino/default-lang/code_es.js"
-DEFAULT_LANG_FILE="/usr/share/blockly-arduino/default-lang/code_en.js"
+TEMPLATE_LANG_FILE="/usr/share/blockly-arduino/template-lang/code.js"
 
 EASY_SITE_FILES="/usr/share/blockly-arduino/easy-sites/"
 EASY_SITE=$EASY_SITE_FILES"blockly-arduino.json"
@@ -28,14 +26,16 @@ case $ACTION in
 			session_lang=$LANG
 
 			if [[ $session_lang == *"ca"* ]]; then
-  				cp $DEFAULT_LANG_FILE_VALENCIAN $BLOCKLY_LANG_FILE
+				config_lang="ca"
 			else
 				if [[ $session_lang == *"es"* ]];then
-					cp $DEFAULT_LANG_FILE_SPANISH $BLOCKLY_LANG_FILE
+					config_lang="es"
 				else
-					cp $DEFAULT_LANG_FILE $BLOCKLY_LANG_FILE
+					config_lang="en"
 				fi
 			fi 
+
+			sed -e "s;%DEFAULT_LANG%;$config_lang;g" $TEMPLATE_LANG_FILE > $BLOCKLY_LANG_FILE
 
 			echo "Creating link in /var/www..."
 			ln -sf $BLOCKLY_DIR /var/www/blockly-arduino
