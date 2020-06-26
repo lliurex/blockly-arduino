@@ -1,3 +1,9 @@
+blockly-arduino (0.3) bionic; urgency=medium
+
+  * Fixed valencian locale in app file
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 26 Jun 2020 14:03:54 +0200
+
 blockly-arduino (0.2) bionic; urgency=medium
 
   * Fixed blockly-arduino install file.
