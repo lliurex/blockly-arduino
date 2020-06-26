@@ -1,3 +1,9 @@
+blockly-arduino (0.2) bionic; urgency=medium
+
+  * Fixed blockly-arduino install file.
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 26 Jun 2020 12:35:15 +0200
+
 blockly-arduino (0.1) bionic; urgency=medium
 
   * Initial release.
