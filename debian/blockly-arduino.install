@@ -1,5 +1,5 @@
 blockly/blockly-arduino/* /usr/share/blockly-arduino/blockly
-blockly/templa-lang/*    /usr/share/blockly-arduino/template-lang
+blockly/template-lang/*    /usr/share/blockly-arduino/template-lang
 blockly/site-apache/*     /etc/apache2/sites-available
 blockly/easy-sites/*     /usr/share/blockly-arduino/easy-sites
 
