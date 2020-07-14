@@ -12,7 +12,7 @@ EASY_SITE=$EASY_SITE_FILES"blockly-arduino.json"
 EASY_SITE_ICON=$EASY_SITE_FILES"blockly-arduino.svg"
 
 EASY_SITES_DIR="/var/lib/lliurex-www/links/"
-EASY_SITES_DIR_ICON="/var/www/srv/icons/"
+EASY_SITES_DIR_ICON="/usr/share/lliurex-www/srv/icons/"
 
 
 PACKAGE_LIST=$@
