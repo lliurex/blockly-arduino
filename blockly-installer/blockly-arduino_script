@@ -9,9 +9,9 @@ TEMPLATE_LANG_FILE="/usr/share/blockly-arduino/template-lang/code.js"
 
 EASY_SITE_FILES="/usr/share/blockly-arduino/easy-sites/"
 EASY_SITE=$EASY_SITE_FILES"blockly-arduino.json"
-EASY_SITE_ICON=$EASY_SITE_FILES"blockly-arduino.png"
+EASY_SITE_ICON=$EASY_SITE_FILES"blockly-arduino.svg"
 
-EASY_SITES_DIR="/var/www/srv/links/"
+EASY_SITES_DIR="/var/lib/lliurex-www/links/"
 EASY_SITES_DIR_ICON="/var/www/srv/icons/"
 
 
@@ -83,7 +83,7 @@ case $ACTION in
 
 						echo "Removin easy-site..."
 						rm -f $EASY_SITES_DIR"blockly-arduino.json"
-						rm -f $EASY_SITES_DIR_ICON"blockly-arduino.png"
+						rm -f $EASY_SITES_DIR_ICON"blockly-arduino.svg"
 						
 						echo "Restarting apache service..."
 						systemctl restart apache2.service 
