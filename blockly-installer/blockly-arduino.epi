@@ -1,8 +1,9 @@
  
 {
 	"type":"apt",
-	"pkg_list": [{"name":"blockly-arduino","key_store":"blockly-arduino"}], 
+	"pkg_list": [{"name":"blockly-arduino","key_store":"blockly-arduino","custom_icon":"arduino.svg"}], 
 	"script": {"name":"/usr/share/zero-lliurex-blockly-arduino/blockly-arduino_script","remove":true},
+	"custom_icon_path":"/usr/share/icons/lliurex/apps/48/",
 	"zomando":"zero-lliurex-blockly-arduino"
 	
 	}
