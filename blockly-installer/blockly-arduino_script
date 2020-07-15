@@ -42,6 +42,7 @@ case $ACTION in
 			
 			echo "Creatin easy-site..."
 			cp $EASY_SITE $EASY_SITES_DIR
+			chown www-data:www-data $EASY_SITES_DIR"blockly-arduino.json" || true 
 			cp $EASY_SITE_ICON $EASY_SITES_DIR_ICON
 			
 			echo "Enabling apache site for blockly@arduino..."
