@@ -76,7 +76,8 @@ Blockly.Msg.PROCEDURES_DEFRETURN_FUNCTION = "per la funció";
 Blockly.Msg.PROCEDURES_DEFRETURN_TYPE = "tipus";
 
 Blockly.Msg.VARIABLES_AS = "tipus";
-Blockly.Msg.VARIABLES_SET_CONST = "constant %1 fixada a %2";
+Blockly.Msg.VARIABLES_SET_CONST = "constant";
+Blockly.Msg.VARIABLES_SET_CONST_AT = "fixada a";
 Blockly.Msg.ARD_TYPE_ARRAY = "matriu";
 Blockly.Msg.ARD_TYPE_BOOL = "booleà";
 Blockly.Msg.ARD_TYPE_CHAR = "caràcter";
@@ -2661,11 +2662,11 @@ Blockly.Msg.CAT_ROBOBOX_MONTH8 = "- La moto";
 Blockly.Msg.ROBOBOX_MONTH8_ANALYZE = "Analitza una senyal";
 
 //////////////////////////// Virtuino 08/05/2020 ////////////////////////////
-Blockly.Msg.VIRTUINO_INIT_TEXT = "initi connection :";
+Blockly.Msg.VIRTUINO_INIT_TEXT = "Connexió inicial :";
 Blockly.Msg.VIRTUINO_INIT_RX = "RX";
 Blockly.Msg.VIRTUINO_INIT_TX = "TX";
-Blockly.Msg.VIRTUINO_INIT_SPEED = "speed";
-Blockly.Msg.VIRTUINO_DV_TEXT = "receive state";
-Blockly.Msg.VIRTUINO_DV_INPUT = "on virtual canal (DV)";
-Blockly.Msg.VIRTUINO_TOOLTIP = "Virtuino use, see help or go website https://virtuino.com/";
+Blockly.Msg.VIRTUINO_INIT_SPEED = "velocitat";
+Blockly.Msg.VIRTUINO_DV_TEXT = "rep estat";
+Blockly.Msg.VIRTUINO_DV_INPUT = "al canal virtual (DV)";
+Blockly.Msg.VIRTUINO_TOOLTIP = "Usa Virtuino, cerca ajuda o ves a la web https://virtuino.com/";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
