@@ -1,3 +1,10 @@
+blockly-arduino (0.5.2) bionic; urgency=medium
+
+  * Updated translations
+  * Updated some code
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 04 Aug 2020 12:05:04 +0200
+
 blockly-arduino (0.5.1) bionic; urgency=medium
 
   * Changed the permissions of the link json file to www-data
