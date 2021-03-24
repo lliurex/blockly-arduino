@@ -55,8 +55,7 @@ case $ACTION in
 			MAGIC_KEY=$(cat /etc/n4d/key)
 			hostname=$(hostname)
 			if [ "$hostname" != "blockly-arduino" ]; then
-				n4d-client -h localhost -k $MAGIC_KEY -m set_internal_dns_entry -c Dnsmasq -a blockly-arduino
-
+				n4d-client -a https://server:9779 -k $MAGIC_KEY call DnsmasqManager.set_internal_dns_entry "['bockly-arduino']" || true
 			fi
 			systemctl restart dnsmasq
 		
