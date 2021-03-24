@@ -1,0 +1,48 @@
+blockly-arduino (0.6.2) focal; urgency=medium
+
+  * Initial release for focal
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 24 Mar 2021 12:53:37 +0100
+
+blockly-arduino (0.5.2) bionic; urgency=medium
+
+  * Updated translations
+  * Updated some code
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 04 Aug 2020 12:05:04 +0200
+
+blockly-arduino (0.5.1) bionic; urgency=medium
+
+  * Changed the permissions of the link json file to www-data
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 15 Jul 2020 11:44:27 +0200
+
+blockly-arduino (0.5) bionic; urgency=medium
+
+  * Fixed path to copy site icon
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 14 Jul 2020 12:03:31 +0200
+
+blockly-arduino (0.4) bionic; urgency=medium
+
+  * Updated site to new server page
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 14 Jul 2020 11:11:32 +0200
+
+blockly-arduino (0.3) bionic; urgency=medium
+
+  * Fixed valencian locale in app file
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 26 Jun 2020 14:03:54 +0200
+
+blockly-arduino (0.2) bionic; urgency=medium
+
+  * Fixed blockly-arduino install file.
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 26 Jun 2020 12:35:15 +0200
+
+blockly-arduino (0.1) bionic; urgency=medium
+
+  * Initial release.
+
+ -- Juan Ramon Pelegrina  <juapesai@hotmail.com>  Wed, 17 Jun 2020 17:51:02 +0200
