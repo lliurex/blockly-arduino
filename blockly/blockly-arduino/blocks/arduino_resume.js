@@ -102,11 +102,13 @@ head.load(
 "blocks/robots/robot_misc.js",
 "blocks/robuno/robuno.js",
 "blocks/seeed/grove/grove.js",
+"blocks/seeed/grove_beginner_kit/grove_beginner_kit.js",
 "blocks/seeed/seeed_music_shield_2.2/seeed_music_shield_2.2.js",
 "blocks/sensor_actuator/sensor_actuator.js",
 "blocks/servo/servo.js",
 "blocks/Sharp_IR/Sharp_IR.js",
 "blocks/SPI/SPI.js",
+"blocks/stendhal/stendhal.js",
 "blocks/stepper_motor/stepper_motor.js",
 "blocks/storage/storage.js",
 "blocks/technozone51/technozone51.js",
@@ -117,6 +119,9 @@ head.load(
 "blocks/zumobot/zumo_auto.js",
 "blocks/zumobot/zumo_motors.js",
 "blocks/zumobot/zumo_sensors.js",
+"blocks/RTC_DS3231/RTC_DS3231.js",
+"blocks/Adafruit/Adafruit_SSD1306/Adafruit_SSD1306.js",
+"blocks/LoRa/LoRa.js",
 function() {
     // Call a function when done
     console.log("Done loading Various Blocks");
@@ -129,3 +134,4 @@ function() {
 	// Call a function when done
 	console.log("Done loading Blocks Configuration");
 });
+
