@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+CONFIG_PLUGIN_FILE="/opt/arduino/tools/BlocklyArduinoPlugin/tool/BlocklyArduinoPlugin.config"
+
+case "$1" in
+   configure)
+
+		echo "Set default language..."
+		session_lang=$LANG
+		if [[ $session_lang == *"ca"* ]]; then
+			config_lang="lang=ca"
+		else
+			if [[ $session_lang == *"es"* ]];then
+				config_lang="lang=es"
+			else
+				config_lang="lang=en"
+			fi
+		fi
+
+		sed -i "s;lang=fr;$config_lang;g" $CONFIG_PLUGIN_FILE || true
+
+
+
+
+   ;;
+
+   abort-upgrade|abort-remove|abort-deconfigure)
+   ;;
+
+   *)
+       exit 1
+   ;;
+esac
+
+#DEBHELPER#
+
+exit 0
