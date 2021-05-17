@@ -1,3 +1,10 @@
+blockly-arduino (0.6.4) focal; urgency=medium
+
+  * Added Blockly@ArduinoPlugin
+  * Added zmd to install Blockly@ArduinoPlugin
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Mon, 17 May 2021 14:28:32 +0200
+
 blockly-arduino (0.6.3) focal; urgency=medium
 
   * Fixed cname
