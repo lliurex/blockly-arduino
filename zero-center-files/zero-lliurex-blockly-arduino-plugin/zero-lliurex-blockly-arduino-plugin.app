@@ -1,0 +1,19 @@
+Name=zero-lliurex-blockly-arduino-plugin
+Name[en]=Blockly@rduinoPlugin Installer
+Name[es]=Instalador de Blockly@rduinoPlugin
+Name[ca@valencia]=Instal·lador de Blockly@rduinoPlugin
+Name[ca_ES@valencia]=Instal·lador de Blockly@rduinoPlugin
+Name[ca_ES.UTF-8]=Instal·lador de Blockly@rduinoPlugin
+Comment=Wizard to install Blockly@rduino as an Arduino IDE plugin
+Comment[es]=Asistente para instalar Blockly@rduino como plugin de Arduino IDE
+Comment[ca@valencia]=Assistent per a instal·lar Blockly@rduino com connector d'Arduino IDE
+Comment[ca_ES@valencia]=Assistent per a instal·lar Blockly@rduino com connector d'Arduino IDE
+Comment[ca_ES.UTF-8]=Assistent per a instal·lar Blockly@rduino com connector d'Arduino IDE
+Icon=zero-lliurex-blockly-arduino-plugin
+Groups=admin;admins;teachers;sudo
+Category=Software
+ScriptPath=zero-lliurex-blockly-arduino-plugin.zmd
+Using=pkexec
+Service=True
+Depends=zero-server-wizard
+
