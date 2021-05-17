@@ -1,7 +1,7 @@
  
 {
 	"type":"apt",
-	"pkg_list": [{"name":"blockly-arduino-plugin","key_store":"blockly-arduino-plugin","custom_icon":"arduino.svg","custom_name":"Blockly@Arduino Plugin: blocly@arduino plugin to Arduino IDE"}], 
+	"pkg_list": [{"name":"blockly-arduino-plugin","key_store":"blockly-arduino-plugin","custom_icon":"arduino.svg","custom_name":"BlocklyArduinoPlugin: blockly@rduino plugin to Arduino IDE"}], 
 	"script": {"name":"/usr/share/zero-lliurex-blockly-arduino-plugin/blockly-arduino-plugin_script","remove":true},
 	"custom_icon_path":"/usr/share/icons/lliurex/apps/48/",
 	"zomando":"zero-lliurex-blockly-arduino-plugin"
