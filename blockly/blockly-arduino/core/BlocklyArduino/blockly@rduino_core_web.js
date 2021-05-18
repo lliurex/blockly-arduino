@@ -35,8 +35,7 @@ var BlocklyLevel = 'none';
  * Populate the currently selected pane with content generated from the blocks.
  */
 BlocklyDuino.renderContent = function() {
-    var content = $('#content_' + BlocklyDuino.selectedTab);
-	
+    var content = $('#content_' + BlocklyDuino.selectedTab);	
 	if (content.prop('id') == 'content_blocks') {
 		// If the workspace was changed by the XML tab, Firefox will have
 		// performed an incomplete rendering due to Blockly being invisible. Rerender.
@@ -932,11 +931,11 @@ BlocklyDuino.init = function() {
 	BlocklyDuino.initBlocSort();
 	
 	/*pour changer couleur texte dans toolbox */
-    $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
-        // $(this).removeClass("blocklyTreeSelected")
-        $(this).find("span").removeClass("blocklyTreeIconNone")
-        $(this).find("span").addClass('blocklyTreeIcon fa fa-cloud');
-    });
+//    $("div:contains('bitbloq').blocklyTreeRow, div:contains('bitbloq').blocklyTreeRow ~ div").on("click", function() {
+//        $(this).removeClass("blocklyTreeSelected")
+//        $(this).find("span").removeClass("blocklyTreeIconNone")
+//        $(this).find("span").addClass('blocklyTreeIcon fa fa-cloud');
+//    });
 	
 	if (window.location.protocol == 'http:') {
 					$("#btn_create_example, menu_132").attr("href","./examples/examples.php?lang=" + Code.LANG);

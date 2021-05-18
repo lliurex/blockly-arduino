@@ -53,6 +53,7 @@ head.load(
 "generators/arduino/fischertechnik.js",
 "generators/arduino/flycamone-eco-v2.js",
 "generators/arduino/grove.js",
+"generators/arduino/grove_beginner_kit.js",
 "generators/arduino/html.js",
 "generators/arduino/HX711.js",
 "generators/arduino/I2C.js",
@@ -98,6 +99,7 @@ head.load(
 "generators/arduino/servo.js",
 "generators/arduino/Sharp_IR.js",
 "generators/arduino/SPI.js",
+"generators/arduino/stendhal.js",
 "generators/arduino/stepper_motor.js",
 "generators/arduino/storage.js",
 "generators/arduino/technozone51.js",
@@ -108,6 +110,10 @@ head.load(
 "generators/arduino/zumo_auto.js",
 "generators/arduino/zumo_motors.js",
 "generators/arduino/zumo_sensors.js",
+"generators/arduino/RTC_DS3231.js",
+"generators/arduino/Adafruit_SSD1306.js",
+"generators/arduino/LoRa.js",
+
 function() {
     // Call a function when done
     console.log("Done loading Various Arduino Generators");
