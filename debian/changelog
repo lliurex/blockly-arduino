@@ -1,3 +1,10 @@
+blockly-arduino (0.6.0) bionic-updates; urgency=medium
+
+  * Updated to blockly@rduino 3.2.9.1
+  * Added blockly@rduino plugin
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 18 May 2021 11:35:48 +0200
+
 blockly-arduino (0.5.2) bionic; urgency=medium
 
   * Updated translations
