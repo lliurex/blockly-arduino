@@ -15,5 +15,3 @@ Category=Software
 ScriptPath=zero-lliurex-blockly-arduino-plugin.zmd
 Using=pkexec
 Service=True
-Depends=zero-server-wizard
-
