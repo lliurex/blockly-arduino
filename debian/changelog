@@ -1,3 +1,9 @@
+blockly-arduino (0.6.6) focal; urgency=medium
+
+  * Fixed blockly-arduino-plugin zero app file
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 23 Jul 2021 14:13:03 +0200
+
 blockly-arduino (0.6.5) focal; urgency=medium
 
   * Fixed blockly-arduino-plugin epi file
