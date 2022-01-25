@@ -1,3 +1,9 @@
+blockly-arduino (0.6.8) focal-updates; urgency=medium
+
+  * Updated translations and other changes of blockly@rduino
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 25 Jan 2022 16:36:57 +0100
+
 blockly-arduino (0.6.7) focal; urgency=medium
 
   * Fixed blockly-arduino zero app file
