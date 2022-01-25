@@ -141,6 +141,7 @@ Blockly.Msg.CAT_DFRobot = "DFRobot";
 Blockly.Msg.CAT_DFRobot_SHIELD_LCDKEYPAD = " - carte LCD keypad"; //Added february 27th 2016
 Blockly.Msg.CAT_DFPLAYER = " - DFPlayer mini MP3";
 Blockly.Msg.CAT_DFRobot_ISD1820 = " - enregisteur de sons ISD1820";
+Blockly.Msg.CAT_IIC_to_GPIO_Shield_V2 = " - carte d'extension I2C";
 
 Blockly.Msg.CAT_LED_RGB_CHAIN = "DEL RGB en série";
 Blockly.Msg.CAT_OLED_U8G = "afficheur OLED I2C";
@@ -164,8 +165,10 @@ Blockly.Msg.CAT_GROVE_LCD = " - écrans LCD";
 Blockly.Msg.CAT_GROVE_LCD2 = " Ecrans LCD";
 Blockly.Msg.CAT_GROVE_COMM = " - communication";
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT = "Grove Beginner Kit";  //added september 10th 2020
-Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_BEGINNER_KIT_IN = Blockly.Msg.CAT_GROVE_IN;  //added september 10th 
 Blockly.Msg.CAT_GROVE_BEGINNER_KIT_OUT = Blockly.Msg.CAT_GROVE_OUT;  //added september 10th 2020
+Blockly.Msg.CAT_GROVE_MINI_LiDAR = "> mini LIDAR";  //added february 11th 2021
+Blockly.Msg.CAT_GROVE_VL53L0X = "> distance 'Time of Flight' VL53L0X";  //added february 13th 2021
 
 Blockly.Msg.CAT_TECHNOZONE = "TechnoZone51";  //added march 11th 2015
 Blockly.Msg.CAT_TECHNOZONE_IN = " - capteurs";
@@ -292,6 +295,7 @@ Blockly.Msg.CAT_PEGUINO_OUT = " - actionneurs";
 Blockly.Msg.CAT_I2C = "I2C"; //added 26/05/2017
 Blockly.Msg.CAT_SPI = "SPI"; //added 26/05/2017
 Blockly.Msg.CAT_NULL = "libre"; //added 8/10/2017
+Blockly.Msg.CAT_I2C_to_GPIO_Module = "carte d'extension I2C"; //added 21/02/2021
 
 Blockly.Msg.CAT_HX711 = "capteur de poids"; //added 23/10/2017
 
@@ -382,6 +386,7 @@ Blockly.Msg.CAT_FONCTION_STOCKAGE_EEPROM = "EEPROM";
 Blockly.Msg.CAT_FONCTION_STOCKAGE_SDCARD = "Carte SD";
 
 Blockly.Msg.CAT_CAPACITIVESENSOR = "détection capacitive";
+Blockly.Msg.CAT_PULSESENSOR = "pulsations cardiaques"; //added 14/02/2021
  
 Blockly.Msg.CAT_ESP8266="ESP8266 IdO";
 Blockly.Msg.CAT_esp8266_wifi=" - WiFi";
@@ -440,7 +445,9 @@ Blockly.Msg.STEPPER_COMPONENT = 'stepper';
 Blockly.Msg.NEOPIXEL_COMPONENT = 'Neopixel';
 Blockly.Msg.SERVO_COMPONENT = 'servomoteur';
 Blockly.Msg.SERVO_DEFAULT_NAME = "SERVO";
+Blockly.Msg.LIDAR_DEFAULT_NAME = 'LiDAR';
 Blockly.Msg.SHARP_IR_COMPONENT = 'télémètre';
+Blockly.Msg.I2C_DEFAULT_NAME = 'I2C';
 
 //**********************************blocks***********************************************
 //**********************************blocks***********************************************
@@ -754,7 +761,7 @@ Blockly.Msg.GROVE_LCD_RGB_CLEAR_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Ba
 Blockly.Msg.GROVE_LCD_RGB_CLEAR_TEXT = "CLEAR Grove LCD RGB";
 Blockly.Msg.GROVE_LCD_RGB_CLEAR_TOOLTIP = "Effaçage de l'écran LCD";
 
-Blockly.Msg.GROVE_LCD_RGB_SCROLL_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
+Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-LCD_RGB_Backlight/";
 Blockly.Msg.GROVE_LCD_RGB_SCROLL_TEXT = "TEXT SCROLLING";
 Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT = "Ecrit avec un ";
 Blockly.Msg.GROVE_LCD_RGB_SCROLL_EFFECT_FIELDDROPDOWN = [["défilement à gauche", "LEFT"], ["défilement à droite", "RIGHT"], ["défilement automatique", "AUTO"]];
@@ -797,6 +804,20 @@ Blockly.Msg.GROVE_FIN_COURSE_HELPURL = "http://www.technologieservices.fr/fr/a-a
 Blockly.Msg.GROVE_FIN_COURSE_TEXT = "l'état du capteur fin de course";
 Blockly.Msg.GROVE_FIN_COURSE_INPUT = "sur la broche";
 Blockly.Msg.GROVE_FIN_COURSE_TOOLTIP = "entrée numérique classique en lecture";
+
+//************************************** ajouté 05/05/2021 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_HELPURL = "https://wiki.seeedstudio.com/Grove-12-Channel-Capacitive-Touch-Keypad-ATtiny1616-/#applications";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TEXT = "la valeur tapée sur le clavier";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT1 = "connecté sur la broche (Rx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_INPUT2 = "et sur la broche (Tx)";
+Blockly.Msg.GROVE_Capacitive_Touch_Keypad_TOOLTIP = "renvoie, par une communication série, la valeur tapée sur le clavier";
+
+//************************************** ajouté 30/06/2021 \lang\BlocklyArduino **********************************************************
+Blockly.Msg.GROVE_SGP30_HELPURL = "https://wiki.seeedstudio.com/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/";
+Blockly.Msg.GROVE_SGP30_TEXT = "concentration de ";
+Blockly.Msg.GROVE_SGP30_INPUT1 = "dioxyde de carbone (CO2) en ppm";
+Blockly.Msg.GROVE_SGP30_INPUT2 = "composés organiques volatiles (TVOC) en ppb";
+Blockly.Msg.GROVE_SGP30_TOOLTIP = "Le capteur de gaz SGP30 renvoie la concentration de CO2 (en ppm) ou de TVOC (en ppb) dans l'air, il se connecte sur bus I2C.";
 
 //************************************** ajoute 16/03/2017 \lang\BlocklyArduino **********************************************************
 Blockly.Msg.GROVE_INOUT_BT_AT_HELPURL = "http://wiki.seeed.cc/Grove-Serial_Bluetooth_v3.0/";
@@ -1319,7 +1340,7 @@ Blockly.Msg.RFID_code_acces_INPUT2 = "valeur 2";
 Blockly.Msg.RFID_code_acces_INPUT3 = "valeur 3";
 Blockly.Msg.RFID_code_acces_INPUT4 = "valeur 4";
 Blockly.Msg.RFID_code_acces_INPUT5 = "valeur 5";
-Blockly.Msg.RFID_code_acces_TOOLTIP = "Permet de définir le code d'accès autorisé";
+Blockly.Msg.RFID_code_acces_TOOLTIP = "/!\\ATTENTION/!\\ tout doit être en minuscules\n Permet de définir le code d'accès autorisé";
 Blockly.Msg.RFID_acces_autorise_TEXT = "code d'accès autorisé";
 Blockly.Msg.RFID_acces_autorise_TOOLTIP = "Permet de savoir si oui ou non le code d'accès reçu par le module RFID correspond à celui que l'on a défini.";
 
@@ -2702,8 +2723,6 @@ Blockly.Msg.VIRTUINO_DV_INPUT = "sur le canal virtuel (DV)";
 Blockly.Msg.VIRTUINO_TOOLTIP = "utilisation de Virtuino, voir l'aide";
 Blockly.Msg.VIRTUINO_HELP = "https://youtu.be/v1mQ0VC6szw";
 
-
-
 //
 Blockly.Msg.CAT_RTC = "RTC DS3231";
 Blockly.Msg.CAT_SSD1306 = "Adafruit SSD1306";
@@ -2921,6 +2940,7 @@ Blockly.Msg.STENDHAL_INOUT_TEMP_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_TEMP_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_HELPURL = "";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_TEXT = "la valeur analogique du capteur de lumière";
+Blockly.Msg.STENDHAL_INOUT_LIGHT_DIGITAL_TEXT = "l'état du capteur de lumière";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_LIGHT_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
 Blockly.Msg.STENDHAL_INOUT_MOISTURE_HELPURL = "http://www.adafruit.com/";
@@ -2931,12 +2951,14 @@ Blockly.Msg.STENDHAL_INOUT_SOUND_HELPURL = "http://www.adafruit.com/";
 Blockly.Msg.STENDHAL_INOUT_SOUND_TEXT = "la valeur analogique du  capteur de son";
 Blockly.Msg.STENDHAL_INOUT_SOUND_INPUT = "connecté sur la broche N°";
 Blockly.Msg.STENDHAL_INOUT_SOUND_TOOLTIP = "capteur analogique, le bloc renvoie une valeur comprise entre 0 et 1023";
-Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT1 = "un capteur DS18B20";
-Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1 = "est présent sur la broche";
-Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2 = "à l'adresse";
-Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP1 = "test si un capteur de température est présent, renvoie 'vrai' si présent";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT1 = "capteurs DS18B20";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT1 = "présents sur la broche";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT2 = "nombre";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP1 = "initialise les capteurs en série sur une broche";
 Blockly.Msg.STENDHAL_INOUT_DS18B20_HELPURL = "https://www.carnetdumaker.net/articles/mesurer-une-temperature-avec-un-capteur-1-wire-ds18b20-et-une-carte-arduino-genuino/";
-Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2 = "la valeur du capteur DS18B20";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_TEXT2 = "attribuer à la variable";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT3 = "la valeur du capteur sur la broche";
+Blockly.Msg.STENDHAL_INOUT_DS18B20_INPUT4 = "à la position";
 Blockly.Msg.STENDHAL_INOUT_DS18B20_TOOLTIP2 = "renvoie la valeur du capteur de température, en nombre flottant";
 Blockly.Msg.STENDHAL_INOUT_PIR_HELPURL = "http://www.adafruit.com/";
 Blockly.Msg.STENDHAL_INOUT_PIR_TEXT = "l'état du détecteur de mouvement";
@@ -3034,3 +3056,68 @@ Blockly.Msg.STENDHAL_STEPPER_STEP2 = "de";
 Blockly.Msg.STENDHAL_STEPPER_STEP3 = "pas dans le sens horaire.";
 Blockly.Msg.STENDHAL_STEPPER_TOOLTIP = "Réglage par défaut pour le modèle 24BYJ48. La vitesse est réglable de 1 à 9 tr/min. Le nombre de pas par tour est 3072";
 Blockly.Msg.STENDHAL_STEPPER_HELPURL = "http://www.arduino.cc/en/Reference/StepperConstructor";
+
+//******** mini LiDAR Grove 11/02/2021
+Blockly.Msg.grove_TF_Mini_LiDAR_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-TF_Mini_LiDAR/";
+Blockly.Msg.grove_TF_Mini_LiDAR_ATTACH1 = "attacher un télémètre laser";
+Blockly.Msg.grove_TF_Mini_LiDAR_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.grove_TF_Mini_LiDAR_INPUT1 = "sur la broche (fil jaune)";
+Blockly.Msg.grove_TF_Mini_LiDAR_INPUT2 = "sur la broche (fil blanc)";
+Blockly.Msg.grove_TF_Mini_LiDAR_attach_TOOLTIP = "definir les broches du LiDAR pour utiliser le nom de l'objet";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TITLE = "valeur de la distance";
+Blockly.Msg.grove_TF_Mini_LiDAR_distance_TOOLTIP = "la distance doit être comprise entre 30cm et 2 m";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TITLE = "force du signal";
+Blockly.Msg.grove_TF_Mini_LiDAR_strength_TOOLTIP = "renvoie une valeur déterminant la qualité de l'information";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TITLE = "température interne du capteur";
+Blockly.Msg.grove_TF_Mini_LiDAR_chip_temp_TOOLTIP = "renvoie la température interne du micrcontrôleur du capteur";
+
+//******** Grove Time of Flight Distance Sensor VL53L0X 13/02/2021
+Blockly.Msg.grove_VL53L0X_MISC_HELPURL = "https://wiki.seeedstudio.com/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/";
+Blockly.Msg.grove_VL53L0X_test_TITLE = "test si le capteur renvoie des données";
+Blockly.Msg.grove_VL53L0X_test_TOOLTIP = "la connexion série est établie et un message est renvoyé";
+Blockly.Msg.grove_VL53L0X_start_and_report_TITLE = "distance mesurée (en mm)";
+Blockly.Msg.grove_VL53L0X_start_and_report_TOOLTIP = "renvoie la valeur mesurée par le capteur, en mm.\n /!\\ ne pas dépasser 2m, préférer un intervalle entre 30 & 10000 mm /!\\ ";
+Blockly.Msg.grove_VL53L0X_stop_measure_TITLE = "stoppe les mesures en continu";
+Blockly.Msg.grove_VL53L0X_stop_measure_TOOLTIP = "stoppe le mode continu de mesure";
+
+//******** Pulse Sensor 14/02/2021
+Blockly.Msg.pulseSensor_HELPURL = "https://github.com/WorldFamousElectronics/PulseSensorPlayground";
+Blockly.Msg.pulseSensor_TEXT1 = "valeur image";
+Blockly.Msg.pulseSensor_TEXT2 = "des pulsations captées sur la broche analogique A";
+Blockly.Msg.pulseSensor_TOOLTIP = "valeur analogique [0~1024] mesurée, penser à définir\nun seuil en dessous duquel ce n'est pas un battement";
+
+//******** IIC to GPIO Shield V2.0 SKU DFR0013 21/02/2021
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TEXT = "lister les périphériques I²C dans la console série";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console, à régler sur 115200 bauds";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_HELPURL = "https://wiki.dfrobot.com/IIC_to_GPIO_Shield_V2.0_SKU__DFR0013";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH1 = "attacher un composant I2C";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_ATTACH3 = "sur le composant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT1 = "à l'adresse 0x";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_attach_TOOLTIP = "fixe l'adresse de la carte d'extension I2C et lui attribue un identifiant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT2 = "état logique";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_INPUT3 = "de la broche";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_read_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT1 = "mettre la broche";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT2 = "du composant";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_OUTPUT3 = "à l'état logique";
+Blockly.Msg.dfrobot_IIC_to_GPIO_Shield_V2_write_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+
+//******** IIC to GPIO Module 21/02/2021
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TEXT = "lister les périphériques I²C dans la console série";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_TOOLTIP = "Scanne les périphériques et retourne les adresses dans la console, à régler sur 115200 bauds";
+Blockly.Msg.I2C_to_GPIO_Module_SCAN_HELPURL = "https://playground.arduino.cc/Main/I2cScanner/";
+Blockly.Msg.I2C_to_GPIO_Module_HELPURL = "https://github.com/nicoverduin/PCA9555";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH1 = "attacher un composant I2C";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH2 = "avec l'identifiant";
+Blockly.Msg.I2C_to_GPIO_Module_ATTACH3 = "sur le composant";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT1 = "à l'adresse 0x";
+Blockly.Msg.I2C_to_GPIO_Module_attach_TOOLTIP = "fixe l'adresse de la carte d'extension I2C et lui attribue un identifiant";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT2 = "état logique";
+Blockly.Msg.I2C_to_GPIO_Module_INPUT3 = "de la broche";
+Blockly.Msg.I2C_to_GPIO_Module_read_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT1 = "mettre la broche";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT2 = "du composant";
+Blockly.Msg.I2C_to_GPIO_Module_OUTPUT3 = "à l'état logique";
+Blockly.Msg.I2C_to_GPIO_Module_write_TOOLTIP = "les broches du shield sont repérées de 0 à 7 pour le 0.0 à 0.7, puis de 8 à 15 pour les 1.0 à 1.7";

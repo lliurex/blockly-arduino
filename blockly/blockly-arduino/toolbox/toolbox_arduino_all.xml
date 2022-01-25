@@ -503,6 +503,15 @@
 			</value>
 		</block>
 	</category>
+	<category name="CAT_PULSESENSOR" colour="#B395CC">
+		<block type="pulseSensor_check">
+			<value name="PIN">
+				<shadow type="math_number">
+					<field name="NUM">0</field>
+				</shadow>
+			</value>
+		</block>
+	</category>
 	<category name="CAT_LCD_SCREEN" colour="#87AD34">
 		<category name="- Grove I2C LCD RGB" colour="#8ec31f">
 				<block type="grove_lcd_rgb_init"></block>
@@ -770,6 +779,33 @@
 			<block type="I2C_request_HW"></block>
 			<block type="I2C_available_HW"></block>
 			<block type="I2C_data_HW"></block>
+		</category>
+		<category name="CAT_I2C_to_GPIO_Module" colour="#CC0033">
+			<block type="I2C_to_GPIO_Module_scan"></block>
+			<block type="I2C_to_GPIO_Module_attach">
+				<value name="ADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="I2C_to_GPIO_Module_read">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="I2C_to_GPIO_Module_write">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="STATE">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
 		</category>
 	</category>
 	<category name="CAT_SPI" colour="#9999FF">
@@ -1150,6 +1186,33 @@
 		</category>
 	</category>
 	<category name="CAT_DFRobot" colour="#F39800">
+		<category name="CAT_IIC_to_GPIO_Shield_V2" colour="#F39800">
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_scan"></block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_attach">
+				<value name="ADDRESS">
+					<shadow type="math_number">
+						<field name="NUM">20</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_read">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+			</block>
+			<block type="dfrobot_IIC_to_GPIO_Shield_V2_write">
+				<value name="PIN">
+					<shadow type="math_number">
+						<field name="NUM">0</field>
+					</shadow>
+				</value>
+				<value name="STATE">
+					<shadow type="inout_onoff"></shadow>
+				</value>
+			</block>
+		</category>
 		<category name="CAT_ROMEO_3" colour="#F39800">
 			<block type="romeo_M1_sens"></block>
 			<block type="romeo_M1_PWM">
@@ -1166,7 +1229,7 @@
 						<field name="NUM">127</field>
 					</shadow>
 				</value>
-			</block>			
+			</block>
 			<block type="romeo_switch"></block>
 		</category>
 		<category name="CAT_DFPLAYER" colour="#F39800">
@@ -1297,6 +1360,7 @@
 			<category name="CAT_STENDHAL_DIGITAL2" colour="#9999CC">
 				<block type="stendhal_button"></block>
 				<block type="stendhal_magnetsensor"></block>
+				<block type="stendhal_digital_light_sensor"></block>
 				<block type="stendhal_tactile"></block>
 				<block type="stendhal_tiltsensor"></block>
 				<block type="stendhal_pir_motion_sensor"></block>
@@ -1966,6 +2030,7 @@
 			<block type="grove_temporature_sensor"></block>
 			<block type="grove_moisture_sensor"></block>
 			<block type="grove_dht_read"></block>
+			<block type="grove_gas_sensor_SGP30"></block>
 			<block type="grove_sound_sensor"></block>
 			<block type="grove_pir_motion_sensor"></block>
 			<block type="grove_line_finder"></block>
@@ -1973,6 +2038,29 @@
 			<block type="grove_thumb_joystick"></block>
 			<block type="grove_RECEPTEUR_IR"></block>
 			<block type="grove_FIN_COURSE"></block>
+			<block type="grove_12_Channel_Capacitive_Touch_Keypad"></block>
+			<category name="CAT_GROVE_MINI_LiDAR" colour="#8ec31f">
+				<block type="grove_TF_Mini_LiDAR_attach">
+					<value name="PIN1">
+						<shadow type="math_number">
+							<field name="NUM">2</field>
+						</shadow>
+					</value>
+					<value name="PIN2">
+						<shadow type="math_number">
+							<field name="NUM">3</field>
+						</shadow>
+					</value>
+				</block>
+				<block type="grove_TF_Mini_LiDAR_distance"></block>
+				<block type="grove_TF_Mini_LiDAR_strength"></block>
+				<block type="grove_TF_Mini_LiDAR_chip_temp"></block>
+			</category>
+			<category name="CAT_GROVE_VL53L0X" colour="#8ec31f">
+				<block type="grove_VL53L0X_test"></block>
+				<block type="grove_VL53L0X_start_and_report"></block>
+				<!-- <block type="grove_VL53L0X_stop_measure"></block> -->
+			</category>
 		</category>
 		<category name="CAT_GROVE_OUT" colour="#8ec31f">
 			<block type="grove_led"></block>
@@ -2221,28 +2309,28 @@
 		</block>
 		<block type="RFID_code_acces" colour="#9BACB4">
 			<value name="VAL1">
-				<shadow type="math_number">
-					<field name="NUM">1</field>
+				<shadow type="text">
+					<field name="TEXT">1</field>
 				</shadow>
 			</value>
 			<value name="VAL2">
-				<shadow type="math_number">
-					<field name="NUM">1</field>
+				<shadow type="text">
+					<field name="TEXT">1</field>
 				</shadow>
 			</value>
 			<value name="VAL3">
-				<shadow type="math_number">
-					<field name="NUM">1</field>
+				<shadow type="text">
+					<field name="TEXT">1</field>
 				</shadow>
 			</value>
 			<value name="VAL4">
-				<shadow type="math_number">
-					<field name="NUM">1</field>
+				<shadow type="text">
+					<field name="TEXT">1</field>
 				</shadow>
 			</value>
 			<value name="VAL5">
-				<shadow type="math_number">
-					<field name="NUM">1</field>
+				<shadow type="text">
+					<field name="TEXT">1</field>
 				</shadow>
 			</value>
 		</block>
