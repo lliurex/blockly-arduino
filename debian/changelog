@@ -1,3 +1,9 @@
+blockly-arduino (0.6.2) bionic-updates; urgency=medium
+
+  * Updated translations and other changes of blockly@rduino
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 25 Jan 2022 17:05:17 +0100
+
 blockly-arduino (0.6.1) bionic-updates; urgency=medium
 
   * Fixed blockly@rduino zero app file
