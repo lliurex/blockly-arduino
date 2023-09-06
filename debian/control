@@ -6,23 +6,11 @@ Build-Depends: debhelper (>= 10), llxsrchelper,zero-dev,python3-poinstaller
 Standards-Version: 4.1.2
 Homepage: http://lliurex.net
 
-Package: blockly-arduino
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, arduino-ide
-Description: Blockly-Arduino deb
- Package with blockly@arduino code
-
 Package:blockly-arduino-plugin
 Architecture:all
 Depends: ${shlibs:Depends}, ${misc:Depends}, arduino-ide
 Description: Blockly-Arduino plugin deb
  Package with blockly@arduino plugin code
-
-Package: zero-lliurex-blockly-arduino
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, zero-center, epi-gtk
-Description: Blockly-Arduino installer
- Package zomando and epi files to install blockly@arduino
 
 Package: zero-lliurex-blockly-arduino-plugin
 Architecture: all
