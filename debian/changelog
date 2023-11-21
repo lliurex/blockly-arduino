@@ -1,3 +1,9 @@
+blockly-arduino (0.16.10) jammy; urgency=medium
+
+  * Restore pkgs for server
+
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 21 Nov 2023 09:35:01 +0100
+
 blockly-arduino (0.16.8) jammy; urgency=medium
 
   * Initial release for Jammy
